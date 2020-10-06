@@ -27,7 +27,7 @@ function addTask(e) {
   }
   else if (taskInput.value !== "") {
     const li = document.createElement("li");                     // Create
-    li.className = "taskList black white-text";                  // Add class
+    li.className = "taskEach black white-text";                  // Add class
     li.appendChild(document.createTextNode(taskInput.value));    // Create a text Node  and append to li
     const link = document.createElement("a");                    // Create new link element
     li.style = "padding-top:5px;padding-left:20px;background:#fff;height:40px;line-height:40px;color:#666;"; //STYLING
@@ -44,7 +44,7 @@ function addTask(e) {
 //SEARCH TASKS BY KEYWORD ----------------------------------------------------------------------------------------------
 function searchTask(e) {
 	const text = e.target.value.toLowerCase();
-	document.querySelectorAll(".taskList").forEach(function (task) {
+	document.querySelectorAll(".taskEach").forEach(function (task) {
 	  const item = task.firstChild.textContent;
 	  if (item.toLowerCase().indexOf(text) != -1) {
 		  task.style.display = "block";
